@@ -1,67 +1,81 @@
 {
-    "ProjectName": "Foodamental"
-    ,"ProjectGuid": "ed5c3c93-9c9e-43c0-b762-4f562b5abe96"
-    ,"projectVersion": 1
-    ,"AppIdentifier": "com.telerik.Foodamental"
-    ,"DisplayName": "Foodamental"
-    ,"Author": ""
-    ,"Description": ""
-    ,"BundleVersion": "1.0"
-    ,"AndroidVersionCode": "1"
-    ,"iOSDeviceFamily": [
-        "1",
-        "2"
-    ]
-    ,"iOSBackgroundMode": []
-    ,"WP8TileTitle": ""
-    ,"WP8Publisher": ""
-    ,"WP8Capabilities": []
-    ,"WP8Requirements": []
-    ,"WP8PublisherID": "{5e9a20dc-9a6e-4951-b773-084f56faef48}"
-    ,"WP8ProductID": "{0613d0fb-0d00-4726-87f3-061cd7e44eab}"
-    ,"ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}"
-    ,"FrameworkVersion": "3.5.0"
-    ,"CorePlugins": [
-        "org.apache.cordova.camera",
-        "org.apache.cordova.console",
-        "org.apache.cordova.device",
-        "org.apache.cordova.dialogs",
-        "org.apache.cordova.file",
-        "org.apache.cordova.geolocation",
-        "org.apache.cordova.inappbrowser",
-        "org.apache.cordova.media",
-        "org.apache.cordova.splashscreen",
-        "org.apache.cordova.statusbar"
-    ]
-    ,"AndroidPermissions": [
-        "android.permission.CAMERA",
-        "android.permission.VIBRATE",
-        "android.permission.ACCESS_COARSE_LOCATION",
-        "android.permission.ACCESS_FINE_LOCATION",
-        "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
-        "android.permission.READ_PHONE_STATE",
-        "android.permission.INTERNET",
-        "android.permission.RECEIVE_SMS",
-        "android.permission.RECORD_AUDIO",
-        "android.permission.MODIFY_AUDIO_SETTINGS",
-        "android.permission.READ_CONTACTS",
-        "android.permission.WRITE_CONTACTS",
-        "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.ACCESS_NETWORK_STATE",
-        "android.permission.ACCOUNT_MANAGER",
-        "android.permission.GET_ACCOUNTS",
-        "android.permission.MANAGE_ACCOUNTS",
-        "android.permission.BROADCAST_STICKY"
-    ]
-    ,"DeviceOrientations": [
-      "Portrait"
-    ]
-    ,"AndroidHardwareAcceleration": "false"
-    ,"iOSStatusBarStyle": "Default"
-    ,"WP8SupportedResolutions": [
-      "ID_RESOLUTION_WVGA",
-      "ID_RESOLUTION_WXGA",
-      "ID_RESOLUTION_HD720P"
-    ]
-    ,"Framework": "Cordova"
+  "ProjectName": "Foodamental",
+  "ProjectGuid": "ed5c3c93-9c9e-43c0-b762-4f562b5abe96",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.Foodamental",
+  "DisplayName": "Foodamental",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{5e9a20dc-9a6e-4951-b773-084f56faef48}",
+  "WP8ProductID": "{0613d0fb-0d00-4726-87f3-061cd7e44eab}",
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "CorePlugins": [
+    "org.apache.cordova.battery-status",
+    "org.apache.cordova.camera",
+    "org.apache.cordova.media-capture",
+    "org.apache.cordova.console",
+    "org.apache.cordova.contacts",
+    "org.apache.cordova.device",
+    "org.apache.cordova.device-motion",
+    "org.apache.cordova.device-orientation",
+    "org.apache.cordova.file",
+    "org.apache.cordova.file-transfer",
+    "org.apache.cordova.geolocation",
+    "org.apache.cordova.globalization",
+    "org.apache.cordova.inappbrowser",
+    "org.apache.cordova.media",
+    "org.apache.cordova.network-information",
+    "org.apache.cordova.dialogs",
+    "org.apache.cordova.splashscreen",
+    "org.apache.cordova.statusbar",
+    "org.apache.cordova.vibration"
+  ],
+  "AndroidPermissions": [
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCOUNT_MANAGER",
+    "android.permission.BROADCAST_STICKY",
+    "android.permission.CAMERA",
+    "android.permission.GET_ACCOUNTS",
+    "android.permission.INTERNET",
+    "android.permission.MANAGE_ACCOUNTS",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.READ_CONTACTS",
+    "android.permission.READ_PHONE_STATE",
+    "android.permission.RECEIVE_SMS",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.VIBRATE",
+    "android.permission.WRITE_CONTACTS",
+    "android.permission.WRITE_EXTERNAL_STORAGE"
+  ],
+  "DeviceOrientations": [
+    "Portrait"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "Framework": "Cordova",
+  "CordovaPluginVariables": {
+    "com.telerik.mobiletesting": {
+      "IOS_APP_URL": ""
+    }
+  }
 }

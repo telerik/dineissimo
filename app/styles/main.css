@@ -207,7 +207,8 @@ html, body {
 }
 
 #editProfileDrawer .km-content {
-    height: 76%;
+    clear:both;
+    height: 76%
 }
 
 #editProfileDrawer .km-scroll-container {
@@ -215,7 +216,6 @@ html, body {
 }
 
 #bottom-button-panel {
-    position: absolute;
     bottom: 0;
     height: 66px;
     width: 100%;

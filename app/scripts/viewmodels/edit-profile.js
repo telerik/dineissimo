@@ -38,6 +38,13 @@
             e.preventDefault();
             $("#appDrawer").hide();
             $("#editProfileDrawer").show();
+            
+            //This is a workaround to fix the issues with the soft keyboard on android.
+            var total = $("#editProfileDrawer .km-scroll-container").height();
+            var topPart = $("#edit-body").height();
+            var margin = (total - topPart - 66);
+            $("#bottom-button-panel").css("margin-top", margin + "px");
+            
         },
 
         hideEditProfile: function (e) {
@@ -79,7 +86,7 @@
                                 if (!data.success) {
                                     win.app.alert("Request had " + data.errors.length + " errors.\nThe first one was: " + data.errors[0].message);
                                 } else {
-                                    win.app.alert("Success", data);
+                                    win.app.mobileApp.navigate("views/thanks.html");
                                 }
                             }
                         });
@@ -87,8 +94,12 @@
             }
 
         },
-
+        
+        fixFooter: function(e) {
+        },
+        
         refreshCache: function () {
+            console.log("refreshing cache");
             localStorage.clear();
             app.storeStock.read();
         },

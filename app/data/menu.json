@@ -131,96 +131,96 @@
 
     {
         "id": 17,
-        "title": "Drink #1",
-        "description": "This is Drink #1",
+        "title": "Chai Tea",
+        "description": "What better to warm you up on a cold day.",
         "price": 1.99,
         "imgSrc": "https://bs1.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9c14de60-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 18,
-        "title": "Drink #2",
-        "description": "This is Drink #2",
+        "title": "Orange Juice",
+        "description": "Sun kissed and delicious",
         "price": 2.99,
         "imgSrc": "https://bs2.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9c64ac10-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 19,
-        "title": "Drink #3",
-        "description": "This is Drink #3",
+        "title": "Red Wine",
+        "description": "After a hard day, everyone needs a little unwinding",
         "price": 3.99,
         "imgSrc": "https://bs3.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9cd54830-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 20,
-        "title": "Drink #4",
-        "description": "This is Drink #4",
+        "title": "Caramel Latte",
+        "description": "For that quick pick me up",
         "price": 4.99,
         "imgSrc": "https://bs2.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9d2b5770-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 22,
-        "title": "Drink #5",
-        "description": "This is Drink #5",
+        "title": "Expresso",
+        "description": "For that even quicker pick up.",
         "price": 5.99,
         "imgSrc": "https://bs2.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9db484a0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 23,
-        "title": "Drink #6",
-        "description": "This is Drink #6",
+        "title": "Watermellon Juice",
+        "description": "The sweet taste of the south",
         "price": 6.99,
         "imgSrc": "https://bs2.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9e301d40-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 24,
-        "title": "Drink #7",
-        "description": "This is Drink #7",
+        "title": "Mai Tai",
+        "description": "The Mai Tai is an alcoholic cocktail based on rum, Curaçao liqueur, and lime juice, associated with Polynesian-style settings.",
         "price": 7.99,
         "imgSrc": "https://bs1.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9e9ac5f0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 25,
-        "title": "Drink #8",
-        "description": "This is Drink #8",
+        "title": "Berry Smoothy",
+        "description": "Delicious and great for you",
         "price": 8.99,
         "imgSrc": "https://bs1.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9f2fda00-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 26,
-        "title": "Drink #9",
-        "description": "This is Drink #9",
+        "title": "Yogurt based Smoothies",
+        "description": "Try our wide range of these tasty treats",
         "price": 9.99,
         "imgSrc": "https://bs3.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9f4cfef0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 27,
-        "title": "Drink #10",
-        "description": "This is Drink #10",
+        "title": "Lemon Water",
+        "description": "Crisp and clean classic",
         "price": 10.99,
         "imgSrc": "https://bs3.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9f941a10-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 28,
-        "title": "Drink #11",
-        "description": "This is Drink #11",
+        "title": "Iced Tea",
+        "description": "Now in both Sweet and unsweatened versions",
         "price": 11.99,
         "imgSrc": "https://bs1.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9ff302f0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
     },
     {
         "id": 29,
-        "title": "Drink #12",
-        "description": "This is Drink #12",
+        "title": "Water",
+        "description": "The original Classic",
         "price": 12.99,
         "imgSrc": "https://bs3.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/a044f380-4f0d-11e4-808d-09ddc7aae25e",
         "type": "drinks"
@@ -228,64 +228,64 @@
 
     {
         "id": 30,
-        "title": "Dessert #1",
-        "description": "This is Dessert #1",
+        "title": "Custerd Pie",
+        "description": "Great tasting and great for you",
         "price": 1.50,
         "imgSrc": "https://bs1.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/98da9af0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "desserts"
     },
     {
         "id": 31,
-        "title": "Dessert #2",
-        "description": "This is Dessert #2",
+        "title": "Chocolate Cake",
+        "description": "Who doesn't love this classic",
         "price": 2.50,
         "imgSrc": "https://bs3.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9922ee90-4f0d-11e4-808d-09ddc7aae25e",
         "type": "desserts"
     },
     {
         "id": 32,
-        "title": "Dessert #3",
-        "description": "This is Dessert #3",
+        "title": "Smarties and Pudding",
+        "description": "Two great treats together at last",
         "price": 3.50,
         "imgSrc": "https://bs1.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/999119b0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "desserts"
     },
     {
         "id": 33,
-        "title": "Dessert #4",
-        "description": "This is Dessert #4",
+        "title": "Berry Cake",
+        "description": "Heavenly combination of fruit and sweet",
         "price": 4.50,
         "imgSrc": "https://bs2.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9a0956f0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "desserts"
     },
     {
         "id": 34,
-        "title": "Dessert #5",
-        "description": "This is Dessert #5",
+        "title": "Chocolate Chip Cookies",
+        "description": "To dip or not to dip, the ultimate question",
         "price": 5.50,
         "imgSrc": "https://bs1.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9a670750-4f0d-11e4-808d-09ddc7aae25e",
         "type": "desserts"
     },
     {
         "id": 35,
-        "title": "Dessert #6",
-        "description": "This is Dessert #6",
+        "title": "Layer Cake",
+        "description": "For when one level of cake is just not enough",
         "price": 6.50,
         "imgSrc": "https://bs3.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9ac490a0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "desserts"
     },
     {
         "id": 36,
-        "title": "Dessert #7",
-        "description": "This is Dessert #7",
+        "title": "Jello Mould",
+        "description": "Almost as much fun to play with as it is to eat",
         "price": 7.50,
         "imgSrc": "https://bs3.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9b17e0c0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "desserts"
     },
     {
         "id": 37,
-        "title": "Dessert #8",
-        "description": "This is Dessert #8",
+        "title": "Assorted Fruit",
+        "description": "Dessert for people on a diet",
         "price": 8.50,
         "imgSrc": "https://bs1.cdn.telerik.com/v1/eyD4rLcMGB8J6ljO/9b7283e0-4f0d-11e4-808d-09ddc7aae25e",
         "type": "desserts"

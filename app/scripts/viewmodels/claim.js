@@ -11,7 +11,7 @@
             //Navigate to the thanks page
             console.log('we have the view', view);
         },
-        title: "Claim your prize"
-
+        title: "Claim your prize",
+        onSim: win.navigator.simulator
     });
 }(window));

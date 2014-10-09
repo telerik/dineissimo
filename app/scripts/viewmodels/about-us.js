@@ -25,7 +25,13 @@
             win.open("mailto://" + this.email);
         },
         directionLaunch: function () {
-            win.open("maps://maps.apple.com/?q=" + this.lat + "," + this.lng);
+            if (kendo.support.mobileOS.android || kendo.support.mobileOS.wp) {
+                win.open("http://maps.google.com/maps?saddr=current&daddr=" + this.lat + "," + this.lng);
+            }
+            else {
+                 win.open("maps://maps.apple.com/?q=" + this.lat + "," + this.lng);
+            }
+           
         },
         blogLaunch: function () {
             win.open(this.blog, "_blank", "location=yes,hidden=no");

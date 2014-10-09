@@ -35,10 +35,15 @@
         //Initialize the KendoUI app
         var mobileApp = null;
 
+        //console.log("win.navigator", window.navigator);
+        //showAlert("We are running in simulator?:" + win.navigator.simulator);
+        
         if (win.navigator.simulator) {
             mobileApp = new kendo.mobile.Application(document.body, { skin: "flat", initial: "views/menu.html" });
         } else {
             mobileApp = new kendo.mobile.Application(document.body, { skin: "flat", initial: "views/intro.html" });
+            //seem to have issues if this isn't set to false
+            win.navigator.simulator = false;
         }
 
         // Create a single list of products, and use filters rather than having seperate ones for favorites, menu, and shopping cart
@@ -71,7 +76,10 @@
         return {
             mobileApp: mobileApp,
             alert: showAlert,
-            storeStock: storeStock
+            storeStock: storeStock,
+            debug:  function () {
+                //Helper function to run debug code on a device. 
+            },
         };
 
     }());

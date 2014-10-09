@@ -1,9 +1,16 @@
 .intro-screen .km-text {
 	
     width: 100%;
-    height: 548px;
+    height: 100%;
     top: 0;
     display: block;
+}
+
+@media screen and (max-height: 548px) {
+
+    .intro-screen .km-text {
+        height: 548px !important;
+    }
 }
 .intro-screen img {
 	height: 100%;

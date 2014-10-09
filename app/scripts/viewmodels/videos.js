@@ -16,5 +16,6 @@
             }
         }),
         title: "Videos",
+        playerWidth: document.documentElement.clientWidth,
     });
 }(window));

@@ -1,78 +1,75 @@
-<div data-role="view" id="claim-simulator" data-title="Claim your prize" data-bind="visible: window.navigator.simulator" data-layout="main" data-model="app.Claim">
+
+<div data-role="view" id="claim" data-title="Claim your prize" data-layout="main" data-model="app.Claim">
     <header data-role="header">
         <div data-role="navbar">
             <span data-role="view-title" data-bind="html: title" data-icon="back-button"></span>
             <a data-role="backbutton" data-align="right" class="fa fa-close orange"></a>
         </div>
     </header>
-    <div class="bottom-border">
-        <p>
-            <strong>That was easy! To claim your prize le's get the app to your phone.</strong>
-        </p>
-        <p>
-            <strong>It only takes about 30 seconds</strong>
-        </p>
-        <div class="left">
-            <h1>1</h1>
+    <div class="devic-message" data-bind="invisible: onSim">
+        <div class="bottom-border">
+            <p>
+                <strong>Claiming your prize takes less than 2 minutes!</strong>
+            </p>
+            <div class="left">
+                <h1>1</h1>
+            </div>
+            <p>In your IDE, open somefile.js and uncomment the code that uses the Cordova camera plugin(
+                <strong>line:xxx</strong>)</p>
         </div>
-        <p>Download AppBuilder companion app from your device's app store (itunes, Google Play, Windows Store).</p>
-    </div>
-    <div class="bottom-border">
-        <div class="left">
-            <h1>2</h1>
+        <div class="bottom-border">
+            <img src="styles/images/threefingerclaim.png" class="right claim-img" />
+            <div class="left">
+                <h1>2</h1>
+            </div>
+            <p>Use a
+                <strong>three-fingure tap</strong>to perform a LiveSync. This pushes code updates from the cloud to your device. It's like a refreshbutton for your mobile app!</p>
         </div>
-        <p>In AppBuilder, select <strong>Run > Build</strong> for your device's platform (Android / iPhone / Windows PHone), choose <strong>"AppBuilder companion app"</strong> and click <strong>Next.</strong></p>
-    </div>
-    <div>
-        <div class="left">
-            <h1>3</h1>
+        <div>
+
+            <img src="styles/images/myprofileclaim.png" class="right claim-img" />
+            <div class="left">
+                <h1>3</h1>
+            </div>
+            <p>Go to "
+                <strong>Edit my profile</strong>" and snap any picture as a placeholder for your 'profile photo'. Enter the email address you are using to access
+                <strong>Telerik Platform</strong>and click "
+                <strong>UPDATE</strong>" to claim your prize.</p>
         </div>
-        <p>Scan the resulting QR Code with your device's QR reader. It will automatically bring up this app via AppBuilder companion app on your device.</p>
+        <div class="waiver">
+            <p>*If you are one of the first 1000 people to complete it, a
+                <strong>$5 Amazon Gift Certificate</strong>will be emailed to you within 24 hours</p>
+            <p><a href="#thanks">Rules and regulations</a>
+            </p>
+        </div>
     </div>
-    
+
+    <div class="simulator-message">
+        <div class="bottom-border">
+            <p>
+                <strong>That was easy! To claim your prize let's get the app to your phone.</strong>
+            </p>
+            <p>
+                <strong>It only takes about 30 seconds</strong>
+            </p>
+            <div class="left">
+                <h1>1</h1>
+            </div>
+            <p>Download AppBuilder companion app from your device's app store (itunes, Google Play, Windows Store).</p>
+        </div>
+        <div class="bottom-border">
+            <div class="left">
+                <h1>2</h1>
+            </div>
+            <p>In AppBuilder, select <strong>Run > Build</strong> for your device's platform (Android / iPhone / Windows PHone), choose <strong>"AppBuilder companion app"</strong> and click <strong>Next.</strong></p>
+        </div>
+        <div>
+            <div class="left">
+                <h1>3</h1>
+            </div>
+            <p>Scan the resulting QR Code with your device's QR reader. It will automatically bring up this app via AppBuilder companion app on your device.</p>
+        </div>
+    </div>
 </div>
 
-<div data-role="view" id="claim" data-title="Claim your prize" data-bind="invisible: window.navigator.simulator" data-layout="main" data-model="app.Claim">
-    <header data-role="header">
-        <div data-role="navbar">
-            <span data-role="view-title" data-bind="html: title" data-icon="back-button"></span>
-            <a data-role="backbutton" data-align="right" class="fa fa-close orange"></a>
-        </div>
-    </header>
-    <div class="bottom-border">
-        <p>
-            <strong>Claiming your prize takes less than 2 minutes!</strong>
-        </p>
-        <div class="left">
-            <h1>1</h1>
-        </div>
-        <p>In your IDE, open somefile.js and uncomment the code that uses the Cordova camera plugin(
-            <strong>line:xxx</strong>)</p>
-    </div>
-    <div class="bottom-border">
-        <img src="styles/images/threefingerclaim.png" class="right claim-img" />
-        <div class="left">
-            <h1>2</h1>
-        </div>
-        <p>Use a
-            <strong>three-fingure tap</strong>to perform a LiveSync. This pushes code updates from the cloud to your device. It's like a refreshbutton for your mobile app!</p>
-    </div>
-    <div>
-
-        <img src="styles/images/myprofileclaim.png" class="right claim-img" />
-        <div class="left">
-            <h1>3</h1>
-        </div>
-        <p>Go to "
-            <strong>Edit my profile</strong>" and snap any picture as a placeholder for your 'profile photo'. Enter the email address you are using to access
-            <strong>Telerik Platform</strong>and click "
-            <strong>UPDATE</strong>" to claim your prize.</p>
-    </div>
-    <div class="waiver">
-        <p>*If you are one of the first 1000 people to complete it, a
-            <strong>$5 Amazon Gift Certificate</strong>will be emailed to you within 24 hours</p>
-        <p><a href="#thanks">Rules and regulations</a>
-        </p>
-    </div>
-</div>
 
