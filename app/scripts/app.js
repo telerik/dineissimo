@@ -32,16 +32,21 @@
             }
         };
 
-        //Initialize the KendoUI app
-        var mobileApp = null;
-
         //console.log("win.navigator", window.navigator);
         //showAlert("We are running in simulator?:" + win.navigator.simulator);
-        
-        if (win.navigator.simulator) {
-            mobileApp = new kendo.mobile.Application(document.body, { skin: "flat", initial: "views/menu.html" });
-        } else {
-            mobileApp = new kendo.mobile.Application(document.body, { skin: "flat", initial: "views/intro.html" });
+
+        //Initialize the KendoUI app        
+        var mobileApp = new kendo.mobile.Application(document.body, {
+            skin: "flat",
+            initial: win.navigator.simulator ? "views/menu.html" : "views/intro.html",
+            init: function() {
+                // Increase the click threshold for responsiveness
+                // See http://www.telerik.com/forums/click-event-does-not-fire-reliably
+                kendo.UserEvents.defaultThreshold(50);
+            }
+        });
+
+        if (!win.navigator.simulator) {
             //seem to have issues if this isn't set to false
             win.navigator.simulator = false;
         }
