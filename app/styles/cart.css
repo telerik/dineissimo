@@ -1,5 +1,10 @@
-#cart-list, #empty-cart {
+#cart-list{
    margin-top: 48px;
+}
+#empty-cart {
+    font-size: 1.6em;
+   text-align: center;
+   margin-top: 60%;
 }
 
 .cart-title {
@@ -130,4 +135,3 @@
 	font-size: 24px;
 	padding: 0 12px;
 }
-

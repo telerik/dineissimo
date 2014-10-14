@@ -4,7 +4,7 @@
                 data-bind="source: dataSource, visible: dataSource.aggregates().id.count"
                 data-template="cartTemplate">
         </ul>
-        <p id="empty-cart" data-bind="invisible: dataSource.aggregates().id.count">Your cart is empty</p>
+        <p id="empty-cart" class="orange" data-bind="invisible: dataSource.aggregates().id.count">Your cart is empty</p>
     </div>
     <div id="cart-footer">
         <ul id="cart-buttons">

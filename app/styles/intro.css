@@ -17,7 +17,7 @@
 	width: 100%;
 }
 
-.intro-screen a {
+.intro-screen a, .intro-screen div {
 	padding: 0 !important;
 	border: none !important;
 	margin: 0 !important;
