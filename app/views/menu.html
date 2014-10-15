@@ -1,4 +1,4 @@
-<div data-role="view" id="popular" data-title="Menu" data-layout="main" data-init="app.Menu.popularInit" data-show="app.Menu.showMenuView" data-model="app.Menu">
+<div data-role="view" id="popular" data-title="Menu" data-layout="main" data-show="app.Menu.menuShow" data-hide="app.Menu.menuHide" data-model="app.Menu">
     <header data-role="header">
         <div data-role="navbar">
             <span data-role="view-title"></span>
@@ -13,17 +13,19 @@
         <a href="#favorites" data-bind="click: showFavoriteView">Favorites</a>
         <a href="#categories" data-bind="click: showCategoryView">Categories</a>
     </div>
-    <ul id="popular-list" data-role="listview"
+    <!--<ul id="popular-list" data-role="listview"
             data-bind="source:dataSource, invisible: photoListVisible"
             data-template="menuTemplate">
-    </ul>
-    <ul id="popular-photo-list" data-role="listview"
+    </ul>-->
+    <ul id="popular-list" data-bind="source: dataSource"></ul>
+    <!--<ul id="popular-photo-list" data-role="listview"
             data-bind="source: dataSource, visible: photoListVisible"
             data-template="photoMenuTemplate">
-    </ul>
+    </ul>-->
+    <ul id="popular-photo-list" data-bind="source: dataSource"></ul>
 </div>
 
-<div data-role="view" id="favorites" data-title="Favorites" data-title="Menu" data-layout="main" data-model="app.Menu" data-init="app.Menu.favoritesInit">
+<div data-role="view" id="favorites" data-title="Favorites" data-layout="main" data-model="app.Menu" data-show="app.Menu.favoritesShow" data-hide="app.Menu.favoritesHide">
     <header data-role="header">
         <div data-role="navbar">
             <span data-role="view-title"></span>
@@ -38,18 +40,20 @@
         <a href="#favorites" class="active">Favorites</a>
         <a href="#categories" data-bind="click: showCategoryView">Categories</a>
     </div>
-    <ul id="favorite-list" data-role="listview"
+    <!--<ul id="favorite-list" data-role="listview"
             data-bind="source: dataSource, visible: dataSource.aggregates().id.count"
             data-template="menuTemplate">
     </ul>
     <ul id="favorite-photo-list" data-role="listview"
             data-bind="source: dataSource, visible: favoritePhotoListVisible"
             data-template="photoMenuTemplate">
-    </ul>
+    </ul>-->
+    <ul id="favorite-list" data-bind="source: dataSource"></ul>
+    <ul id="favorite-photo-list" data-bind="source: dataSource"></ul>
     <p id="no-fav-msg" data-bind="invisible: dataSource.aggregates().id.count">Click the star to add favorites</p>
 </div>
 
-<div data-role="view" id="categories" data-title="Categories" data-layout="main" data-model="app.Menu" data-init="app.Menu.categoriesInit">
+<div data-role="view" id="categories" data-title="Categories" data-layout="main" data-model="app.Menu" data-show="app.Menu.categoriesShow" data-hide="app.Menu.categoriesHide">
     <header data-role="header">
         <div data-role="navbar">
             <span data-role="view-title"></span>
@@ -82,14 +86,16 @@
             </select>
         </div>
     </div>
-    <ul id="category-list" data-role="listview"
+    <!--<ul id="category-list" data-role="listview"
             data-bind="source: dataSource, invisible: photoListVisible"
             data-template="menuTemplate">
     </ul>
     <ul id="category-photo-list" data-role="listview"
             data-bind="source: dataSource, visible: photoListVisible"
             data-template="photoMenuTemplate">
-    </ul>
+    </ul>-->
+    <ul id="category-list" data-bind="source: dataSource"></ul>
+    <ul id="category-photo-list" data-bind="source: dataSource"></ul>
 </div>
 
 <script type="text/x-kendo-template" id="menuTemplate">

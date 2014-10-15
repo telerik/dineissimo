@@ -11,6 +11,13 @@
 
         favoriteFilter: { field: "favorited", operator: "eq", value: true },
         popularList: null,
+        favoritesEmpty: true,
+        /*photoListVisible: false,
+        favoriteListVisible: false,
+        favoritePhotoListVisible: false,*/
+        inListView: true,
+        title: "Menu",
+        
 
         setupImageHandlers: function(selector) {
             $(selector).each(function() {
@@ -19,77 +26,137 @@
             });
         },
 
-        popularInit: function() {
-           /* console.log("start init");
-              win.app.Menu.popularList = $("#popular-list").kendoMobileListView({
-                dataSource: win.app.Menu.dataSource,
-               template: $('#menuTemplate').html()
-            }).data("kendoMobileListView");  
-            console.log("end init");*/
-
-            win.app.Menu.setupImageHandlers("#popular-list, #popular-photo-list");
-        },
-
-        favoritesInit: function() {
-            win.app.Menu.setupImageHandlers("#favorite-list, #favorite-photo-list");
-        },
-
-        categoriesInit: function() {
-            win.app.Menu.setupImageHandlers("#category-list, #category-photo-list");
-        },
-
+        
         showMenuView: function () {
-            console.log("start show");
+            console.log("start show");           
             win.app.Menu.dataSource.filter({});
-            // win.app.Menu.popularList.refresh();
             console.log("end show");
             setTimeout(everliveImages.responsiveAll);
         },
 
+        menuShow: function (e) {
+           console.log('show')
+          
+            $("#popular-list").kendoMobileListView({
+               dataSource: win.app.Menu.dataSource,
+               template: $('#menuTemplate').html(),
+               //invisible: win.app.Menu.photoListVisible
+            }).data("kendoMobileListView");
+
+            $("#popular-photo-list").kendoMobileListView({
+                dataSource: win.app.Menu.dataSource,
+               template: $('#photoMenuTemplate').html(),
+               //visible: win.app.Menu.photoListVisible
+            }).data("kendoMobileListView");
+            
+            win.app.Menu.setupImageHandlers("#popular-list,#popular-photo-list");
+           
+              
+        },
+
+        menuHide: function () {
+            console.log("destroying")
+            var listView1 = $("#popular-list").data("kendoMobileListView");
+            listView1.destroy();
+            var listView2 = $("#popular-photo-list").data("kendoMobileListView");
+            listView2.destroy();
+        },
+
         showFavoriteView: function () {
+
             this.dataSource.filter(null);
             this.dataSource.filter(this.favoriteFilter);
             setTimeout(everliveImages.responsiveAll);
         },
 
+        favoritesShow: function () {
+
+            $("#favorite-list").kendoMobileListView({
+                dataSource: win.app.Menu.dataSource,
+                template: $('#menuTemplate').html(),
+                //visible: win.app.Menu.dataSource.aggregates().id.count 
+                //invisible: win.app.Menu.photoListVisible               
+            }).data("kendoMobileListView"); 
+
+            $("#favorite-photo-list").kendoMobileListView({
+                dataSource: win.app.Menu.dataSource,
+                template: $('#photoMenuTemplate').html(),
+                //visible: win.app.Menu.photoListVisible                
+            }).data("kendoMobileListView"); 
+
+            $("#favorite-photo-list").hide();
+            win.app.Menu.setupImageHandlers("#favorite-list, #favorite-photo-list");
+
+        },
+
+        favoritesHide: function(){
+           console.log("destroying")
+            var listView1 = $("#favorite-list").data("kendoMobileListView");
+            listView1.destroy(); 
+            var listView2 = $("#favorite-photo-list").data("kendoMobileListView");
+            listView2.destroy(); 
+        },
+
         showCategoryView: function () {
+
+            
             this.dataSource.filter(null);
             this.dataSource.sort({ field: "price", dir: "asc"});
             setTimeout(everliveImages.responsiveAll);
+        },
+
+        categoriesShow: function () {
+            $("#category-list").kendoMobileListView({
+                dataSource: win.app.Menu.dataSource,
+                template: $('#menuTemplate').html(),
+                //invisible: win.app.Menu.photoListVisible                
+            }).data("kendoMobileListView"); 
+
+            $("#category-photo-list").kendoMobileListView({
+                dataSource: win.app.Menu.dataSource,
+                template: $('#photoMenuTemplate').html(),
+                //visible: win.app.Menu.photoListVisible               
+            }).data("kendoMobileListView"); 
+
+            win.app.Menu.setupImageHandlers("#category-list, #category-photo-list");
+
+        },
+
+        categoriesHide: function(){
+           console.log("destroying")
+            var listView1 = $("#category-list").data("kendoMobileListView");
+            listView1.destroy(); 
+            var listView2 = $("#category-photo-list").data("kendoMobileListView");
+            listView2.destroy(); 
         },
 
         changeSort: function (e) {
             this.dataSource.sort({ field: "price", dir: e.currentTarget.value });
         },
 
-        favoritesEmpty: true,
-        photoListVisible: false,
-        favoriteListVisible: false,
-        favoritePhotoListVisible: false,
-        inListView: true,
-        title: "Menu",
+        
 
         addToFavorites: function (e) {
-            console.log("one");
+            console.log("adding");
             e.preventDefault();
             var fromDs = this.dataSource.get(e.data.id);
             if (!fromDs.favorited) {
                 fromDs.set('favorited', true);
             }
 
-            console.log("two");
-            if (this.photoListVisible) {
+            /*if (this.photoListVisible) {
                 this.set("favoritePhotoListVisible", true);
             } else {
                 this.set("favoriteListVisible", true);
-            }
+            }*/
 
-            console.log("three");
             this.dataSource.sync();
-            console.log("four");
         },
 
         removeFromFavorites: function (e) {
+
+            console.log("removing")
+
             e.preventDefault();
             var fromDs = this.dataSource.get(e.data.id);
             if (fromDs.favorited) {
@@ -122,18 +189,30 @@
             var icon = $('#view-changer .km-icon');
             if (icon.hasClass('km-th-large')) {
                 icon.removeClass('km-th-large').addClass('km-list-bullet');
-                that.set("photoListVisible", true);
-                if (!that.favoritesEmpty) {
+                //that.set("photoListVisible", true);
+                $("#popular-photo-list").show();
+                $("#popular-list").hide();
+                $("#favorite-photo-list").show();
+                $("#favorite-list").hide();
+                $("#category-photo-list").show();
+                $("#category-list").hide();
+                /*if (!that.favoritesEmpty) {
                     that.set("favoriteListVisible", false);
                     that.set("favoritePhotoListVisible", true);
-                }
+                }*/
             } else {
                 icon.removeClass('km-list-bullet').addClass('km-th-large');
-                that.set("photoListVisible", false);
-                if (!that.favoritesEmpty) {
+                //that.set("photoListVisible", false);
+                $("#popular-photo-list").hide();
+                $("#popular-list").show();
+                $("#favorite-photo-list").hide();
+                $("#favorite-list").show();
+                $("#category-photo-list").hide();
+                $("#category-list").show();
+                /*if (!that.favoritesEmpty) {
                     that.set("favoritePhotoListVisible", false);
                     that.set("favoriteListVisible", true);
-                }
+                }*/
             }
             everliveImages.responsiveAll();
         },
