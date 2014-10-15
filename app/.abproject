@@ -1,9 +1,9 @@
 {
-  "ProjectName": "Foodamental",
+  "ProjectName": "Dineissimo",
   "ProjectGuid": "ed5c3c93-9c9e-43c0-b762-4f562b5abe96",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.Foodamental",
-  "DisplayName": "Foodamental",
+  "AppIdentifier": "com.telerik.Dineissimo",
+  "DisplayName": "Dineissimo",
   "Author": "",
   "Description": "",
   "BundleVersion": "1.0",
