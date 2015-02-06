@@ -90,7 +90,7 @@
         read: function (operation) {
             console.log('reading');
             var cashedData = getFromLocalStorage();
-            if (cashedData.length !== 0) {
+            if (cashedData != null && cashedData != undefined && cashedData.length !== 0)  {
                 console.log("grabbed", cashedData.length);
                 operation.success(cashedData);
             } 
